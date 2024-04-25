@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Konversi Suhu</title>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>KONVERSI SUHU</h1>
+      <div class="input-container">
+        <label for="celsius">Celsius:</label>
+        <input
+          type="number"
+          id="celsius"
+          placeholder="Masukkan suhu dalam Celsius"
+          oninput="updateCalculation()"
+        />
+      </div>
+      <div class="input-container">
+        <label for="fahrenheit">Fahrenheit:</label>
+        <input
+          type="number"
+          id="fahrenheit"
+          placeholder="Masukkan suhu dalam Fahrenheit"
+          oninput="updateCalculation()"
+        />
+      </div>
+      <div class="btn-container">
+        <button
+          onclick="convert()"
+          class="btn"
+        >
+          Konversi
+        </button>
+        <button
+          onclick="reverse()"
+          class="btn"
+        >
+          Reverse
+        </button>
+        <button
+          onclick="reset()"
+          class="btn"
+        >
+          Reset
+        </button>
+      </div>
+      <div class="result">
+        <h2>HASIL:</h2>
+        <p id="result"></p>
+        <h2>Kalkulasi:</h2>
+        <p id="calculation"></p>
+      </div>
+      <div class="formula">
+        <h2>Rumus Konversi:</h2>
+        <p>Fahrenheit = (Celsius × 9/5) + 32</p>
+        <p>Celsius = (Fahrenheit - 32) × 5/9</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
